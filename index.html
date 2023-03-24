@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header> 
+        <h1>To Do</h1>
+        <select class="themeSelector">
+            <option value="dark" >Dark</option>
+            <option value="light" >Light</option>
+            <option value="primary" >Primary</option>
+        </select>
+        <div class="div_for_search">
+            <input type="text" placeholder="Search">
+    </header>
+     <main>
+        <div class="container">
+            <div class="fieldCards">
+                <div >
+                    <input class="titleInput" placeholder="Введите зоголовок"/>                   
+                </div>
+
+                <div class="categoryContainer">
+                    <select class="categorySelect">
+                        <option>Введите зоголовок</option>
+                    </select>
+                    <button class="addCategoryBtn">Cоздать</button>
+                </div>
+
+
+                <div>
+                    <Textarea class="description" placeholder="Введите описание" rows="10"></Textarea>
+                </div>
+                <div>
+                    <button class="addBtn">Создать</button>
+                </div>
+
+            </div>
+            <div class="todos">
+
+            </div>
+        </div>
+     </main>
+
+     <!-- modal window -->
+
+     <div class="modal" id="modal">
+        <div class="modal-container">
+          <div class="close-btn-container">
+            <img 
+              src="/x-mark.png"
+              alt="Close btn"
+              class="close-btn"
+            >
+          </div>
+    
+          <h1>Создание категории</h1>
+    
+          <div class="createCategoryForm">
+            <div>
+              <input class="createCategoryInput" placeholder="Название категории">
+            </div>
+    
+            <div>
+              <button class="createCategoryBtn">Создать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal window for category -->
+
+      <div class="modalCategoryCrud" id="modalCategoryCrud">
+        <div class="modalCategoryCrud-container">
+          <div class="close-categoryCRUD-container">
+            <img 
+              src="/x-mark.png"
+              alt="Close btn"
+              class="close-btn-category-Crud"
+            >
+          </div>
+    
+          <h1>Редактирование категорий</h1>
+    
+          <div class="categoryCrudContent">
+            <div>
+              <input class="editCategoryInput" placeholder="Название категории">
+            </div>
+    
+            <div>
+              <button class="editcategoryBtn">Редактировать</button>
+              <button class="deletecategoryBtn">Удалить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="forChoosing">
+        <select class="selectForChoosing">
+          <option >Введите заголовок</option>
+        </select>
+      </div>
+    
+
+     <script src="script.js"></script>
+     <script src="theme.js"></script>
+     <script src="categoryBtn.js"></script>
+     <script src="categoryCrud.js"></script>
+</body>
+</html>
